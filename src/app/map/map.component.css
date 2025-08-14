@@ -1,0 +1,76 @@
+#map-root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Toolbar styling */
+.toolbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.toolbar button {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.toolbar button:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.toolbar button.active {
+  background: #1e88e5;
+  color: white;
+}
+
+/* Popup styling */
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  min-width: 200px;
+  max-width: 300px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+/* Scrollable content */
+#popup-content {
+  max-height: 200px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}

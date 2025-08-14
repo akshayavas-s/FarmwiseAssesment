@@ -1,0 +1,19 @@
+<div id="map-root">
+  <!-- Map container -->
+  <div #mapContainer class="map"></div>
+
+  <!-- Toolbar -->
+  <div class="toolbar" id="toolbar">
+    <button id="btnReset" title="Reset view">🏠</button>
+    <button id="btnAdd" title="Add polygon">➕</button>
+    <button id="btnModify" title="Modify feature">✏️</button>
+    <button id="btnDelete" title="Delete feature">🗑️</button>
+    <button id="btnExit" title="Exit edit modes">✖</button>
+  </div>
+
+  <!-- Popup -->
+  <div #popup id="popup" class="ol-popup" style="display:none;">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+  </div>
+</div>
